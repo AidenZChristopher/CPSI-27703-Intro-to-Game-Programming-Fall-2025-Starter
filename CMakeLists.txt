@@ -15,7 +15,14 @@ find_package(yaml-cpp CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 # Create executable
-add_executable(demo src/main.cpp src/Game.cpp src/Game.h)
+add_executable(demo 
+    src/main.cpp 
+    src/Game.cpp src/Game.h
+    src/Object.cpp src/Object.h
+    src/Library.cpp src/Library.h
+    src/Engine.cpp src/Engine.h
+    src/GraphicsEngine.cpp src/GraphicsEngine.h
+)
 
 # Link libraries
 target_link_libraries(demo PRIVATE
